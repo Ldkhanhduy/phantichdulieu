@@ -100,43 +100,6 @@ def bieu_do_cot2(ex):
 
 
 
-# ga_2 = ga[-2:-1]/int(gA.values[-2][0])*100
-# ga_3 0= ga[-3:-2]/int(gA.values[-3][0])*100
-# def bieu_do_tron1(ex):
-#     danh_gia = ["Kém", "Trung bình", "Khá", "Tốt"]
-#     dk = [0, 2, 3, 4, 5]
-#     ex["Xếp loại"] = pd.cut(ex["Consumer_Rating"], bins=dk, labels=danh_gia)
-#     print("Bảng tổng lượt đánh giá qua mức độ xếp loại theo các năm")
-#     gAA = ex.pivot_table(index="Xếp loại", columns="Year", values="Consumer_Review_#", aggfunc=sum)
-#     print(gAA)
-#     fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(nrows=2, ncols=2)
-#     plt.suptitle("Biểu đồ phần trăm về lượt đánh giá của năm 2021 và 2022")
-#     ax1.pie(gAA[2019], labels=danh_gia,autopct='%1.1f%%')
-#     ax1.set_title("2019")
-#     ax1.legend()
-#     ax2.pie(gAA[2020], labels=danh_gia,autopct='%0.5f%%')
-#     ax2.set_title("2020")
-#     ax2.legend()
-#     ax3.pie(gAA[2021], labels=danh_gia,autopct='%0.5f%%')
-#     ax3.set_title("2021")
-#     ax3.legend()
-#     ax4.pie(gAA[2022], labels=danh_gia,autopct='%0.5f%%')
-#     ax4.set_title("2022")
-#     ax4.legend()
-#     plt.show()
-
-
-
-# def histogram1(ex):
-#     ga = pd.crosstab(index=ex["Consumer_Rating"], columns=ex["Year"])
-#     print("Bảng tổng số xếp loại qua các năm")
-#     print(ga)
-#     plt.hexbin(ex["Consumer_Rating"], ex["Year"], gridsize=30, cmap="Blues")
-#     plt.colorbar()
-#     plt.title("Biểu đồ tần số theo năm và mức xếp hạng")
-#     plt.xlabel("Mức xếp hạng")
-#     plt.ylabel("Năm")
-#     plt.show()
 
 #Bảng 6
 def histogram2(ex):
@@ -149,23 +112,7 @@ def histogram2(ex):
     plt.ylabel("Số lượng")
     plt.show()
 
-# def bieu_do_hop1(ex):
-#     ga_1 = ex.pivot_table(index="Year", values="Price", aggfunc=sum)
-#     print("Bảng tổng doanh thu theo tình trạng xe qua các năm")
-#     ga_3 = ex.pivot_table(index="Year", columns="Condition", values="Price", aggfunc=sum)
-#     print(ga_3)
-#     x = n.array([2019, 2020, 2021, 2022, 2023])
-#     fig, ax = plt.subplots()
-#     ax.bar(x - 0.25, ga_3.tail(5)["Used"], width=0.25)
-#     ax.bar(x, ga_3.tail(5)["New"], width=0.25)
-#     ax.bar(x + 0.25, ga_3.tail(5)["Honda Certified"], width=0.25)
-#     ax.set_xlabel("Năm")
-#     ax.set_ylabel("Doanh thu (chục triệu)")
-#     ax.set_title("Biểu đồ doanh thu của Honda năm 2019-2023")
-#     ax.legend(labels=["Honda Certified", "New", "Used"])
-#     ax.plot(ga_1.tail(5), marker='o', color="r")
-#     plt.grid(True)
-#     plt.show()
+
 
 def cac_thong_ke(ex):
     a = ex[ex["Year"]==2022]
